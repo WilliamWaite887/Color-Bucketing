@@ -107,6 +107,8 @@ Easy extensibility for new color models or quantization methods
 New algorithms can be added without modifying existing code.
 
 
+
+
 Running the Program
 
 This project is run from the command line using App.java as the entry point.
