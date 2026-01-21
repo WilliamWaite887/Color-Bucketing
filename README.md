@@ -21,21 +21,6 @@ Outputs a new image using only the reduced palette
 
 The entire pipeline is driven by App.java.
 
-🧠 High-Level Architecture
-            App.java
-               │
-               ▼
-        ColorQuantizer
-               │
-     ┌─────────┴─────────┐
-     ▼                   ▼
-ColorMapGenerator   DistanceMetric
-(Bucketing /        (RGB Euclidean /
- Clustering)         Circular HSV Hue)
-               │
-               ▼
-            Pixels
-
 
 The system is designed around strategy interfaces, allowing algorithms to be swapped without changing core logic.
 
