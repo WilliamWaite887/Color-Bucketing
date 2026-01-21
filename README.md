@@ -67,11 +67,13 @@ Improves perceptual accuracy for color-rich images
 
 These can be freely combined:
 
-Generator	Metric
-Bucketing	RGB
-Bucketing	HSV Hue
-Clustering	RGB
-Clustering	HSV Hue
+| Generator  | Metric  |
+| ---------- | ------- |
+| Bucketing  | RGB     |
+| Bucketing  | HSV Hue |
+| Clustering | RGB     |
+| Clustering | HSV Hue |
+
 🧪 How the System Works
 
 All pixels are extracted from the input image
