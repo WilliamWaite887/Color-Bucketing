@@ -24,19 +24,20 @@ The entire pipeline is driven by App.java.
 
 The system is designed around strategy interfaces, allowing algorithms to be swapped without changing core logic.
 
-🗂 File Overview
-File	Description
-App.java	Program entry point — loads images, selects algorithms, runs quantization, and saves output
-Pixel.java	Represents a pixel with RGB and HSV values
-Util.java	Utility functions for image I/O and color conversions
-ColorQuantizer.java	Core engine that maps pixels to palette colors
-ColorQuantizer_Inter.java	Quantizer interface
-ColorMapGenerator_Inter.java	Interface for palette generators
-BucketingMapGenerator.java	Histogram-based palette generator
-ClusteringMapGenerator.java	K-means-style palette generator
-DistanceMetric_Inter.java	Interface for color distance
-SquaredEuclideanMetric.java	RGB color distance
-CircularHueMetric.java	Hue-aware HSV color distance
+| File                           | Description                                                                                 |
+| ------------------------------ | ------------------------------------------------------------------------------------------- |
+| `App.java`                     | Program entry point — loads images, selects algorithms, runs quantization, and saves output |
+| `Pixel.java`                   | Represents a pixel with RGB and HSV values                                                  |
+| `Util.java`                    | Utility functions for image I/O and color conversions                                       |
+| `ColorQuantizer.java`          | Core engine that maps pixels to palette colors                                              |
+| `ColorQuantizer_Inter.java`    | Quantizer interface                                                                         |
+| `ColorMapGenerator_Inter.java` | Interface for palette generators                                                            |
+| `BucketingMapGenerator.java`   | Histogram-based palette generator                                                           |
+| `ClusteringMapGenerator.java`  | K-means-style palette generator                                                             |
+| `DistanceMetric_Inter.java`    | Interface for color distance                                                                |
+| `SquaredEuclideanMetric.java`  | RGB color distance                                                                          |
+| `CircularHueMetric.java`       | Hue-aware HSV color distance                                                                |
+
 🎯 Supported Algorithms
 Palette Generation
 
