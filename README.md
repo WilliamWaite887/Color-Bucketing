@@ -106,6 +106,58 @@ Easy extensibility for new color models or quantization methods
 
 New algorithms can be added without modifying existing code.
 
+
+Running the Program
+
+This project is run from the command line using App.java as the entry point.
+
+1. Compile the source files
+
+From the root directory containing all .java files:
+
+javac *.java
+
+
+This will compile all components of the color quantization system.
+
+2. Prepare an input image
+
+Place the image you want to process in the project directory or provide its full path.
+Supported formats include .png, .jpg, and .jpeg.
+
+Example:
+
+input.jpg
+
+3. Run the program
+
+Execute the program with:
+
+java App <inputImage> <outputImage> <numColors> <generator> <metric>
+
+Arguments
+| Argument        | Description                                             |
+| --------------- | ------------------------------------------------------- |
+| `<inputImage>`  | Path to the input image file                            |
+| `<outputImage>` | Filename for the quantized output image                 |
+| `<numColors>`   | Number of colors in the final palette (e.g., 8, 16, 32) |
+| `<generator>`   | Palette generation method: `cluster` or `bucket`        |
+| `<metric>`      | Color distance metric: `rgb` or `hue`                   |
+
+4. Example
+
+Generate a 16-color image using clustering with hue-aware color distance:
+
+java App photo.jpg result.png 16 cluster hue
+
+
+Generate a fast, bucketed 8-color image using RGB distance:
+
+java App photo.jpg result.png 8 bucket rgb
+
+
+The output image will be saved to the file specified by <outputImage> and will contain only the requested number of colors while preserving as much visual detail as possible.
+
 Summary
 
 This is a full end-to-end image color quantization pipeline written in Java, combining clustering algorithms, histogram techniques, and perceptually aware distance metrics into a clean, extensible system suitable for graphics, compression, and visualization tasks.
