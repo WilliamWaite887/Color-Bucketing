@@ -1,9 +1,9 @@
-🎨 Java Color Quantization & Palette Generator
+Java Color Quantization & Palette Generator
 
 This project is a Java image-processing system that reduces full-color images into compact color palettes using clustering and bucketing algorithms with pluggable color-distance metrics.
 It models how professional tools (GIF encoders, image compressors, pixel-art generators) transform high-resolution images into palette-based formats while preserving visual fidelity.
 
-🚀 What This Program Does
+What This Program Does
 
 Given an input image and a target number of colors, the system:
 
@@ -38,7 +38,8 @@ The system is designed around strategy interfaces, allowing algorithms to be swa
 | `SquaredEuclideanMetric.java`  | RGB color distance                                                                          |
 | `CircularHueMetric.java`       | Hue-aware HSV color distance                                                                |
 
-🎯 Supported Algorithms
+Supported Algorithms
+
 Palette Generation
 
 Bucketing
@@ -74,7 +75,7 @@ These can be freely combined:
 | Clustering | RGB     |
 | Clustering | HSV Hue |
 
-🧪 How the System Works
+How the System Works
 
 All pixels are extracted from the input image
 
@@ -86,12 +87,12 @@ The output image is reconstructed using only the palette colors
 
 This preserves visual similarity while drastically reducing the number of colors.
 
-🧩 Why Circular Hue Matters
+Why Circular Hue Matters
 
 Standard RGB distance treats red and blue as far apart even though they are neighbors on the color wheel.
 The CircularHueMetric wraps hue values, allowing the system to correctly recognize that red ≈ red, improving image quality in saturated and gradient-heavy images.
 
-🏗 Software Engineering Design
+Software Engineering Design
 
 This project follows real-world architecture principles:
 
@@ -105,6 +106,6 @@ Easy extensibility for new color models or quantization methods
 
 New algorithms can be added without modifying existing code.
 
-🏁 Summary
+Summary
 
 This is a full end-to-end image color quantization pipeline written in Java, combining clustering algorithms, histogram techniques, and perceptually aware distance metrics into a clean, extensible system suitable for graphics, compression, and visualization tasks.
